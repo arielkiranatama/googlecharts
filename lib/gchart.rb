@@ -388,6 +388,8 @@ class Gchart
       set_range_marker(range_markers)
     when Array
       range_markers.collect{|marker| set_range_marker(marker)}.join('|')
+    when String
+      range_markers
     end
     "chm=#{markers}"
   end
